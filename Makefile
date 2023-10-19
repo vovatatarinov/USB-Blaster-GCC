@@ -17,7 +17,7 @@ SIZE := $(CROSS_COMPILE)size
 CFLAGS := -ffreestanding -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -O2 -flto
 CFLAGS += -Isrc -Idrv -Isys -Iusb -Icmsis/inc -Istdperiph/inc -Ifsusb/inc -Icmsis/stm32/inc
 
-CCLDFLAGS := -Wl,-T -Wl,stm32.ld -flto -ffreestanding -nostdlib
+CCLDFLAGS := -Wl,-T -Wl,stm32.ld -flto -ffreestanding -nostdlib -mcpu=cortex-m3
 
 # Available plats: BLUEPILL, STLINK_V2_CLONE_DONGLE
 PLAT ?= BLUEPILL
